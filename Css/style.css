@@ -445,13 +445,6 @@ nav .fas{
     grid-gap: 30px;
     margin-top: 50px;
     }
-    .skills-list .skill.active {
-        background: #a200ff;
-        transform: translateY(-10px);
-    }
-    
-    
-    
 }
 #msg{
     color: #61b752;
