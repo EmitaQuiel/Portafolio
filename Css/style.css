@@ -33,7 +33,7 @@ body{
 #header .fotoperfil{
     width: 500px;
     position: absolute;
-    left: 1100px;
+    left: 1000px;
     transform: translateY(460px);
 }
 .container{
