@@ -365,6 +365,11 @@ nav .fas{
     display: none;
 }
 @media only screen and (max-width: 600px) {
+    body{
+    background-image: linear-gradient(135deg,#00b7d4,#505488,#2f3f80,#161569,#5a4894,#a950a1,#ff7cae);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+    }
     #header .fotoperfil{
         width: 300px;
         position: absolute;
@@ -440,7 +445,10 @@ nav .fas{
     grid-gap: 30px;
     margin-top: 50px;
     }
-    
+    .skills-list .skill.active {
+        background: #a200ff;
+        transform: translateY(-10px);
+    }
     
     
     
@@ -452,6 +460,11 @@ nav .fas{
 }
 /*-----------------------css para iPad-----------------*/
 @media only screen and (min-width: 601px) and (max-width: 1080px) {
+    body{
+        background-image: linear-gradient(135deg,#00b7d4,#505488,#2f3f80,#161569,#5a4894,#a950a1,#ff7cae);
+        background-size: 500%;
+        animation: fanimado 10s infinite;
+        }
     #header .fotoperfil{
         width: 500px;
         position: absolute;
