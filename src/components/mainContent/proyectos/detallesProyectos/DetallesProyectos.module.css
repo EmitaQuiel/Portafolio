@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "TECHNOID";
+  src: url("/public/assets/fonts/TECHNOID.TTF") format("truetype");
+}
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes fadeInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modalContent {
+  width: 1440px;
+  height: 656px;
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  animation: slideInFromTop 1.5s ease forwards;
+}
+.modalContent.closing {
+  animation: slideOutToRight 1.5s ease forwards;
+}
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.contentDetalle {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+.image {
+  border-radius: 30px;
+  width: 100%;
+  max-width: 463px;
+  height: 100%;
+  max-height: 551px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+.gallery{
+  animation: fadeInFromLeft 1s ease forwards;
+
+}
+.info {
+  animation: fadeInFromTop 1s ease forwards;
+}
+
+.info2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInFromRight 0.8s ease forwards;
+}
+.image:hover {
+  transform: scale(1.05);
+  filter: brightness(80%); 
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.info {
+  margin-left: 2%;
+  width: 30%;
+
+}
+.info h1 {
+  font-family: "TECHNOID";
+}
+
+.descripcion p {
+  font-family: "Revalia", serif;
+}
+.link .tecnologias {
+  margin-bottom: 5%;
+}
+.link {
+  width: 375px;
+  height: 175px;
+  background-color: #d5d9e6;
+  border-radius: 30px;
+  padding: 3%;
+  text-align: center;
+}
+.link h3 {
+  font-family: "TECHNOID";
+}
+.link a {
+  font-family: "Revalia", serif;
+  color: black;
+  text-decoration: none;
+}
+.link a:hover{
+  color: #6c7db6;
+}
+.link:hover{
+  transform: scale(1.05);
+}
+.tecnologias {
+  background-color: #fed4e4;
+  border-radius: 30px;
+  width: 375px;
+  height: 270px;
+  margin-top: 15%;
+  padding: 3%;
+}
+.tecnologias:hover{
+  transform: scale(1.05);
+
+}
+.tecnologias h3 {
+  font-family: "TECHNOID";
+  text-align: center;
+}
+
+.tecnologias li {
+  font-family: "Revalia", serif;
+  margin-bottom: 2%;
+  list-style: none;
+  text-align: right;
+}

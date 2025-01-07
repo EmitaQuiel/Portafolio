@@ -1,0 +1,82 @@
+.containerProyectos {
+  margin-left: 5%;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+
+  padding: 10%;
+  width: 70%;
+  height: 435px;
+}
+
+.containerTitulos {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-350%);
+}
+
+.titulos {
+  width: 233px;
+  height: 41px;
+  background-color: #e8e8e8;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 3%;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.titulos p {
+  font-family: "Revalia", serif;
+  font-size: 12px;
+}
+
+.titulos:hover {
+  transform: translateY(-5px);
+}
+
+.containerInfo {
+  text-align: center;
+  transform: translateY(-60%);
+}
+
+.containerInfo h2 {
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+.containerInfo p {
+  font-family: "Revalia", serif;
+  color: #9e9e9e;
+  font-size: 16px;
+}
+.active {
+  background-color: #9e9e9e;
+  color: white;
+}
+.containerCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+
+.containerCards.hidden {
+  transform: translateX(100%);
+  opacity: 0; 
+}
+
+.containerCards.visible {
+  transform: translateX(0); 
+  opacity: 1;
+}
+.modal{
+  display: flex;
+  justify-content: center;
+  margin: 6%;
+}
+
+
