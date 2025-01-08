@@ -1,0 +1,118 @@
+
+Footer {
+  margin-top: 100px;
+  margin-left: 5%;
+  border-radius: 30px 30px 0 0;
+  background-color: #ffffff;
+  padding: 10%;
+  width: 70%;
+  height: 100px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+}
+.List {
+  display: flex;
+}
+.List li {
+  margin-right: 50px;
+  list-style: none;
+  font-family: "Revalia";
+  font-size: 15px;
+}
+.List a {
+  text-decoration: none;
+  color: rgb(85, 126, 161);
+}
+.List li:hover {
+  transform: translateY(-5px);
+}
+.contactFreelancer {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.freelancer {
+  background-color: #557ea1;
+  margin-right: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.freelancer:hover {
+  transform: translateY(-5px);
+}
+.contactFreelancer img {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.contactFreelancer a {
+  font-family: "Revalia";
+  font-size: 11px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+hr {
+  margin-top: 3%;
+  border: none;
+  width: 100%;
+  height: 2px;
+  background-color: #557ea1;
+}
+.content2 {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+.redes img {
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.redes img:hover{
+  transform: translateY(-5px);
+
+}
+.copyrigth p {
+  font-family: "Revalia", serif;
+  font-size: 10px;
+  color: #557ea1;
+}

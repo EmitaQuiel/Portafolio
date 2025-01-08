@@ -94,9 +94,8 @@
   cursor: pointer;
   transition: transform 0.5s ease;
 }
-.gallery{
+.gallery {
   animation: fadeInFromLeft 1s ease forwards;
-
 }
 .info {
   animation: fadeInFromTop 1s ease forwards;
@@ -110,16 +109,15 @@
 }
 .image:hover {
   transform: scale(1.05);
-  filter: brightness(80%); 
+  filter: brightness(80%);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 .info {
   margin-left: 2%;
   width: 30%;
-
 }
 .info h1 {
-  font-family: "TECHNOID";
+  font-family: "Italiana", serif;
 }
 
 .descripcion p {
@@ -137,17 +135,19 @@
   text-align: center;
 }
 .link h3 {
-  font-family: "TECHNOID";
+  font-family: "Italiana", serif;
 }
 .link a {
+  font-size: 13px;
+  display: block;
   font-family: "Revalia", serif;
   color: black;
   text-decoration: none;
 }
-.link a:hover{
+.link a:hover {
   color: #6c7db6;
 }
-.link:hover{
+.link:hover {
   transform: scale(1.05);
 }
 .tecnologias {
@@ -158,12 +158,11 @@
   margin-top: 15%;
   padding: 3%;
 }
-.tecnologias:hover{
+.tecnologias:hover {
   transform: scale(1.05);
-
 }
 .tecnologias h3 {
-  font-family: "TECHNOID";
+  font-family: "Italiana", serif;
   text-align: center;
 }
 
@@ -173,3 +172,4 @@
   list-style: none;
   text-align: right;
 }
+

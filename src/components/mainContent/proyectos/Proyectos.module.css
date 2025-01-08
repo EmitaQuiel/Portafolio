@@ -6,6 +6,18 @@
   padding: 10%;
   width: 70%;
   height: 435px;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.containerProyectos.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.containerProyectos.hidden {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .containerTitulos {
@@ -57,26 +69,23 @@
 }
 .containerCards {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
   transform: translateX(0);
   opacity: 1;
-  transition: transform 0.5s ease, opacity 0.5s ease; 
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .containerCards.hidden {
   transform: translateX(100%);
-  opacity: 0; 
+  opacity: 0;
 }
 
 .containerCards.visible {
-  transform: translateX(0); 
+  transform: translateX(0);
   opacity: 1;
 }
-.modal{
+.modal {
   display: flex;
   justify-content: center;
   margin: 6%;
 }
-
-

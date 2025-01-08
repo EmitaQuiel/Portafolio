@@ -1,6 +1,13 @@
 .containerEducacion {
   margin-top: 5%;
-  height: 800px;
+  height: 700px;
+  transform: translateX(30%);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.containerEducacion.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 .containerEducacion h1{
   font-family: 'Italiana', serif;

@@ -26,10 +26,13 @@ header {
   position: relative;
   left: 20%;
 }
+.containerContacto img {
+  width: 30px;
+}
 .containerContacto a {
   margin-right: 20px;
-  display: inline-block; 
-  transition: transform 0.3s ease, color 0.3s ease; 
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .containerContacto a:hover {
@@ -50,8 +53,8 @@ header {
   margin: 0 16px 0 0;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  display: inline-block; 
-  transition: transform 0.3s ease, color 0.3s ease; 
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .navList a:hover {

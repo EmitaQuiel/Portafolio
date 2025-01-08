@@ -1,32 +1,68 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Proyectos.module.css";
 import CardsProyectos from "./cards/CardsProyecto";
-import Modal from 'react-modal';
-import DetallesProyectos from './detallesProyectos/DetallesProyectos'; 
-Modal.setAppElement('#root');
+import Modal from "react-modal";
+import DetallesProyectos from "./detallesProyectos/DetallesProyectos";
+Modal.setAppElement("#root");
 
 function Proyectos() {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Desarrollo Web");
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [modalIsOpen, setModalIsOpen] = useState(false); 
-  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null); 
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const containerRef = useRef(null); 
 
   const proyectos = {
-    "Desarrollo Web": [
-      { titulo: "Proyecto HTML/CSS", texto: "Landing Page creativa.", imagenes: ["img1.jpg", "img2.jpg"] },
-      { titulo: "React App", texto: "Aplicación con React y Redux.", imagenes: ["img3.jpg", "img4.jpg"] },
-    ],
+    
+
     "Arquitectura Backend": [
-      { titulo: "API REST", texto: "API construida con Node.js y Express.", imagenes: ["img5.jpg", "img6.jpg"] },
-      { titulo: "Microservicios", texto: "Arquitectura escalable con Docker.", imagenes: ["img7.jpg", "img8.jpg"] },
+      { titulo: "Proyecto Estudiantil", texto: "Sistema de matricula en C#.", descripcion: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias: ["C#","phpMyAdmin","MySQL","XAMPP","Guna FrameWork"], link:"https://github.com/EmitaQuiel/Matricula-Estudiantil",imagenes: ["InicioMatriculaCorta.jpg","InicioMatricula.jpg", "AnadirMatricula.jpg", "MatriculaPsicologia.jpg", "MatriculaIngenieria.jpg" , "MatriculaEducacion.jpg", "MatriculaComunicacion.jpg", "MatriculaActualizar.jpg", "MatriculaBuscar.jpg","AgradecimientoMatricula.jpg","MatriculaEliminar.jpg","MatriculaMontos.jpg"] },
+
+      { titulo: "E-commerce Poko Palace", texto: "E-commerce en Java.",  descripcion: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias: ["Java Web Services","Tailwind","MySQL","XAMPP","Bootstrap","HTML & CSS"], link:"https://github.com/EmitaQuiel/Poko_Palace",imagenes: ["InicioPokoPalaceCorto.png", "InicioPokoPalace.png", "ProductosPokoPalace.jpg", "CarritoPokoPalace.jpg" , "FormularioClientePokoPalace.jpg", "ResumenCompraPokoPalace.jpg", "RegistroPokoPalace.jpg","HistorialCompraPokoPalace.jpg"] },
+
+      { titulo: "Sistema de Venta", texto: "Software de ventas para tienda.",  descripcion: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias: ["C#","SQL SERVER","Guna Framework"], link:"https://github.com/EmitaQuiel/SistemaVentas",imagenes: ["BienvenidaVentasCorto.jpg", "InicioVentas.jpg","CargaVentas.jpg","BienvenidaVentas.jpg", "UsuariosVentas.jpg","MantenimientoCategoriaVentas.jpg", "MantenimientoProductoVentas.jpg","MantenimientoNegocioVentas.jpg","ComprasRegistrar.jpg","DetalleCompra.jpg","DetalleVentaVentas.jpg","ClientesVentas.jpg","ProveedoresVentas.jpg","ReporteVentas.jpg","ReporteCompras.jpg","EMPLEADOS.jpg"] },
+
+      { titulo: "Sistema Abaca", texto: "Sistema de mantenimiento de empresa.",  descripcion: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias: ["C#",".NET","Entity FrameWork","Bootstrap", "Razor","HTML & CSS"], link:"https://github.com/EmitaQuiel/SistemaVentas",imagenes: ["SesionAbacaCorto.png","SesionAbaca.png", "InicioAbaca.png","MantenimientoAgricultores.png","MantenimientoEmpleados.png","AgregarAgricultor.png","AgregarEmpleado.png","RegistroEmpleados.png","AgregarFactura.png","MantenimientoFactura.png"] },
+
+      { titulo: "Base de datos", texto: "Base de datos con funcionalidades.",  descripcion: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias: ["MySQL","Views","Functions","Stored Procedures"], link:"https://github.com/EmitaQuiel/PreEntrega_Comision47375_SQL",imagenes: ["MYSQL.png","Diagrama Entidad-Relacion.png"] },
     ],
-    "Plataformas Personalizadas": [
-      { titulo: "Proyecto WordPress", texto: "Web corporativa en WordPress.", imagenes: ["Tienda.png"] },
-      { titulo: "E-commerce Lolilo", texto: "Tienda online con WooCommerce.", descripcion: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", tecnologias: ["WordPress","WooCommerce","WP Forms","Elementor","Blocksy Companion","Happy Elementor Addons","Blocksy"], link:"https://github.com/EmitaQuiel/Lolilo",imagenes: ["InicioLolilo_Corto.png","InicioLolilo.png", "TiendaLolilo.png", "CarritoLolilo.png", "FinalizarCompraLolilo.png", "RecibidoLolilo.png", "ContactoLolilo.png"] },
+    
+    "Desarrollo Web": [
+      { titulo: "E-commerce Lolilo", texto: "Tienda online con WooCommerce.", descripcion: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias: ["WordPress","WooCommerce","WP Forms","Elementor","Blocksy Companion","Happy Elementor Addons","Blocksy"], link:"https://github.com/EmitaQuiel/Lolilo",imagenes: ["InicioLolilo_Corto.png","InicioLolilo.png", "TiendaLolilo.png", "CarritoLolilo.png", "FinalizarCompraLolilo.png", "RecibidoLolilo.png", "ContactoLolilo.png"] },
+
+      { titulo: "Cafeteria SweetMatch", texto: "Pagina Informativa con WordPress.", descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias:["WordPress","Blocksy Companion","Happy Elementor Addons","Blocksy"] ,link:"https://github.com/EmitaQuiel/SweetMatcha", imagenes: ["InicioCortoSweet.png","InicioSweet.png"] },
+
+      { titulo: "Heladeria Milu", texto: "Pagina Informativa con WordPress.", descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias:["WordPress","Blocksy Companion","Happy Elementor Addons","Blocksy"] ,link:"https://github.com/EmitaQuiel/Milu", imagenes: ["InicioMiluCorto.png","InicioMilu.png"] },
+
+      { titulo: "Raices de Oro", texto: "Menu de restaurante.", descripcion:"Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tecnologias:["WordPress","Elementor","Happy Elementor Addons","Blocksy", "WP Forms", "Amelia","Kaya QR Code Generator"] ,link:"http://raicesdeoro.getenjoyment.net/", imagenes: ["InicioRaicesOroCorto.png","InicioRaicesOro.png","MenuRaicesOro.png","ReservaRaicesOro.png","ContactoRaicesOro.png"] },
+
     ],
   };
 
   const proyectosFiltrados = proyectos[categoriaSeleccionada];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 } 
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
 
   const handleCategoriaChange = (categoria) => {
     if (categoria !== categoriaSeleccionada) {
@@ -39,22 +75,21 @@ function Proyectos() {
   };
 
   const openModal = (proyecto) => {
-    if (!proyecto || !Array.isArray(proyecto.imagenes) || proyecto.imagenes.length === 0) {
-      console.error("El proyecto no tiene imágenes válidas.");
-      return;
-    }
     setProyectoSeleccionado(proyecto);
     setModalIsOpen(true);
   };
 
-  // Función para cerrar el modal
   const closeModal = () => {
     setModalIsOpen(false);
     setProyectoSeleccionado(null);
   };
 
   return (
-    <div className={styles.containerProyectos}>
+    <section id="Proyectos">
+      <div
+      ref={containerRef}
+      className={`${styles.containerProyectos} ${isVisible ? styles.visible : styles.hidden}`}
+    >
       <div className={styles.containerTitulos}>
         {Object.keys(proyectos).map((categoria) => (
           <div
@@ -69,41 +104,32 @@ function Proyectos() {
 
       <div className={styles.containerInfo}>
         <h2>
-          Proyectos Innovadores en Desarrollo Web, Backend<br /> y Soluciones
-          Personalizadas para Impulsar el Éxito Digital
+          Proyectos Innovadores en Desarrollo Web, Backend<br /> y Soluciones Personalizadas para Impulsar el Éxito
+          Digital
         </h2>
         <p>
-          Descubre cómo mis proyectos combinan creatividad, tecnología avanzada
-          y<br /> soluciones eficientes para ofrecer experiencias digitales únicas y de
-          alto rendimiento.
+          Descubre cómo mis proyectos combinan creatividad, tecnología avanzada<br /> y soluciones eficientes para
+          ofrecer experiencias digitales únicas y de alto rendimiento.
         </p>
       </div>
 
       <div className={`${styles.containerCards} ${isTransitioning ? styles.hidden : ""}`}>
         {proyectosFiltrados.map((proyecto, index) => (
-          <CardsProyectos
-            key={index}
-            titulo={proyecto.titulo}
-            texto={proyecto.texto}
-            onClick={() => openModal(proyecto)} // Al hacer clic, abrir el modal
-          />
+          <CardsProyectos key={index} titulo={proyecto.titulo} texto={proyecto.texto} onClick={() => openModal(proyecto)} />
         ))}
       </div>
 
       <Modal
-  isOpen={modalIsOpen}
-  onRequestClose={closeModal}
-  className={styles.modal}
-  overlayClassName={styles.overlay}
-  contentLabel="Detalles del Proyecto"
->
-
-        <DetallesProyectos
-          proyecto={proyectoSeleccionado}
-          closeModal={closeModal}
-        />
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className={styles.modal}
+        overlayClassName={styles.overlay}
+        contentLabel="Detalles del Proyecto"
+      >
+        <DetallesProyectos proyecto={proyectoSeleccionado} closeModal={closeModal} />
       </Modal>
     </div>
+    </section>
   );
 }
 

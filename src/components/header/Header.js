@@ -28,14 +28,26 @@ function Header() {
           </ul>
         </div>
         <div className={styles.containerContacto}>
-          <a href="https://github.com/EmitaQuiel" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/EmitaQuiel"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="./assets/img/icongithub.png" alt="icongithub" />
           </a>
-          <a href="https://www.linkedin.com/in/emily-castillo-b1a34b268/" target="_blank" rel="noreferrer">
+          <a
+            href="www.linkedin.com/in/emi-castillo"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="./assets/img/iconlinkedin.png" alt="iconlinkedin" />
           </a>
-          <a href="https://wa.me/50671384893" target="_blank" rel="noreferrer">
-            <img src="./assets/img/iconwhatsapp2.png" alt="iconwhatsapp" />
+          <a
+            href="https://www.instagram.com/emily___0507/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="./assets/img/iconInstagram.png" alt="iconwhatsapp" />
           </a>
         </div>
       </nav>

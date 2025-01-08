@@ -1,21 +1,79 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Educacion.module.css";
 import CardEducacion from "./cardEducacion/CardEducacion";
 
 function Educacion() {
+  const [isVisible, setIsVisible] = useState({
+    containerEducacion: false,
+    containerCenter: false,
+    containerInfo1: false,
+    containerInfo2: false,
+  });
+
+  const containerRefs = {
+    containerEducacion: useRef(null),
+    containerCenter: useRef(null),
+    containerInfo1: useRef(null),
+    containerInfo2: useRef(null),
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("data-id");
+            setIsVisible((prev) => ({ ...prev, [id]: true }));
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    Object.values(containerRefs).forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      Object.values(containerRefs).forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, []);
+
   return (
-    <div className={styles.containerEducacion}>
+    <section id="Educacion">
+      <div
+      ref={containerRefs.containerEducacion}
+      data-id="containerEducacion"
+      className={`${styles.containerEducacion} ${isVisible.containerEducacion ? styles.visible : ""}`}
+    >
       <h1>Formación Académica y Profesional</h1>
 
-      <div className={styles.containerCenter}>
+      <div
+        ref={containerRefs.containerCenter}
+        data-id="containerCenter"
+        className={`${styles.containerCenter} ${isVisible.containerCenter ? styles.visible : ""}`}
+      >
         <img src="./assets/img/containerEducacion.png" alt="imageneducacion" />
         <div className={styles.cardCenter}>
           <h3>Ingeniera de Sistemas</h3>
-          <p>Título universitario que certifica mi formación integral en desarrollo de software, análisis de sistemas, bases de datos y gestión de proyectos tecnológicos.</p>
+          <p>
+            Título universitario que certifica mi formación integral en desarrollo de software, análisis de sistemas,
+            bases de datos y gestión de proyectos tecnológicos.
+          </p>
         </div>
       </div>
 
-      <div className={styles.containerInfo1}>
+      <div
+        ref={containerRefs.containerInfo1}
+        data-id="containerInfo1"
+        className={`${styles.containerInfo1} ${isVisible.containerInfo1 ? styles.visible : ""}`}
+      >
         <CardEducacion
           titulo="Curso SQL"
           texto="Certificación que avala mis habilidades en bases de datos, desde consultas básicas hasta optimización avanzada."
@@ -28,7 +86,11 @@ function Educacion() {
         />
       </div>
 
-      <div className={styles.containerInfo2}>
+      <div
+        ref={containerRefs.containerInfo2}
+        data-id="containerInfo2"
+        className={`${styles.containerInfo2} ${isVisible.containerInfo2 ? styles.visible : ""}`}
+      >
         <CardEducacion
           titulo="Especialización Frontend"
           texto="Especialización enfocada en tecnologías modernas para la creación de interfaces web intuitivas y responsivas."
@@ -41,6 +103,7 @@ function Educacion() {
         />
       </div>
     </div>
+    </section>
   );
 }
 

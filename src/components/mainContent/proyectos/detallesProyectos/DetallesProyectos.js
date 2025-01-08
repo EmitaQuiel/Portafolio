@@ -56,12 +56,12 @@ function DetallesProyectos({ proyecto, closeModal }) {
             </a>
           </div>
           <div className={styles.tecnologias}>
+          <h3>Tecnologías utilizadas</h3>
             <ul>
               {proyecto.tecnologias.map((tecnologia, index) => (
                 <li key={index}>{tecnologia}</li>
               ))}
             </ul>
-            <h3>Tecnologías utilizadas</h3>
           </div>
         </div>
       </div>
