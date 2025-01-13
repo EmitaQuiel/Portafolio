@@ -1,194 +1,236 @@
 @font-face {
-    font-family: "TECHNOID";
-    src: url("/public/assets/fonts/TECHNOID.TTF") format("truetype");
-  }
+  font-family: "TECHNOID";
+  src: url("/public/assets/fonts/TECHNOID.TTF") format("truetype");
+}
 .galeriaContainer {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
 }
-  
+
 .galeriaTitle {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
   font-family: "Italiana", serif;
-
 }
-  
+
 .galeriaText {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    font-family: "Revalia";
-
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: "Revalia";
 }
-  
+
 .carouselContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-  
-.carouselButton {
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
-  
-.carouselButton:hover {
-    background-color: #555;
-}
-  
-.carouselButton.prev {
-    position: absolute;
-    left: -60px;
-}
-  
-.carouselButton.next {
-    position: absolute;
-    right: -60px;
-}
-  
-.carouselImageContainer {
-    width: 100%;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-  
-.carouselImage {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
-}
-  
-.zoomable:hover {
-    transform: scale(1.2); 
-}
-  
-.carouselImage:hover {
-    cursor: zoom-in;
-    filter: brightness(80%);
-}
-  
-.imageIndicator {
-    margin-top: 15px;
-}
-  
-.indicatorDot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-  
-.indicatorDot.active {
-    background-color: #333;
-}
-  
-.carouselImageContainer:hover::after {
-    content: '🔍';
-    font-size: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
+.carouselButton {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.carouselButton:hover {
+  background-color: #555;
+}
+
+.carouselButton.prev {
+  position: absolute;
+  left: -60px;
+}
+
+.carouselButton.next {
+  position: absolute;
+  right: -60px;
+}
+
+.carouselImageContainer {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.carouselImage {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.2);
+}
+
+.carouselImage:hover {
+  cursor: zoom-in;
+  filter: brightness(80%);
+}
+
+.imageIndicator {
+  margin-top: 15px;
+}
+
+.indicatorDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.indicatorDot.active {
+  background-color: #333;
+}
+
+.carouselImageContainer:hover::after {
+  content: "🔍";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
 
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
-  
+
 .modalContent {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-    overflow: hidden; 
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
 }
 
 .modalImageContainer {
-    overflow: auto;
-    max-height: 80vh; 
+  overflow: auto;
+  max-height: 80vh;
 }
-  
+
 .modalImage {
-    width: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
-  
+
 .zoomControls {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
 }
-  
+
 .zoomButton {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
-  
+
 .zoomButton:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
-  
+
 .closeModalButton {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
-  
+
 .closeModalButton:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
+@media (max-width: 768px) {
+    /* Ajustes para la imagen del carrusel */
+    .carouselImageContainer {
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+      max-width: 100%; /* Se adapta al ancho de la pantalla */
+    }
+  
+    .carouselImage {
+      width: 100%; /* Ajusta la imagen al 100% */
+      height: auto; /* Mantiene la proporción de la imagen */
+      object-fit: contain; /* Asegura que la imagen se ajuste sin recortes */
+    }
+  
+    /* Cambiar la posición de los botones (flechas) */
+    .carouselButton {
+      position: relative; /* Asegura que los botones sean ubicados relativamente */
+      width: 30px;
+      height: 30px;
+      font-size: 1.2rem;
+      margin-top: 10px; /* Da espacio entre la imagen y las flechas */
+    }
+  
+    /* Alineación de las flechas debajo de la imagen */
+    .carouselButton.prev,
+    .carouselButton.next {
+      position: static; /* Remueve la posición absoluta */
+      margin: 10px 15px; /* Da un margen a los lados de las flechas */
+    }
+  
+    /* Ajuste para la posición de los botones debajo de la imagen */
+    .carouselContainer {
+      flex-direction: column; /* Cambia la dirección de los elementos dentro del contenedor */
+      align-items: center; /* Centra los elementos (imagen y botones) */
+    }
+  
+    /* Ajuste del contenedor de la imagen y las flechas */
+    .carouselButton.prev {
+      margin-bottom: 10px; /* Da espacio entre la flecha izquierda y la imagen */
+    }
+  
+    .carouselButton.next {
+      margin-top: 10px; /* Da espacio entre la flecha derecha y la imagen */
+    }
+  }
+  

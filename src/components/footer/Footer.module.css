@@ -1,4 +1,3 @@
-
 Footer {
   margin-top: 100px;
   margin-left: 5%;
@@ -107,12 +106,69 @@ hr {
   margin-right: 20px;
   cursor: pointer;
 }
-.redes img:hover{
+.redes img:hover {
   transform: translateY(-5px);
-
 }
 .copyrigth p {
   font-family: "Revalia", serif;
   font-size: 10px;
   color: #557ea1;
+}
+@media (max-width: 768px) {
+  Footer {
+    width: 80%; 
+    padding: 5%;
+    height: auto;
+  }
+
+  .List {
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+  .ListInfo ul{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .List li {
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+  .contactFreelancer{
+    margin: 0;
+    padding: 0;
+  }
+
+  .contactFreelancer {
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    width: 100%; 
+  }
+
+  .freelancer {
+    margin-right: 0;
+    margin-bottom: 10px; 
+  }
+  
+  .content2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+    width: 100%; 
+  }
+
+  .copyrigth p {
+    font-size: 12px; 
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
 }

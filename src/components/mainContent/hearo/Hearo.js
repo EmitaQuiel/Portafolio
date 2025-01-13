@@ -23,7 +23,6 @@ function Hearo() {
     <section id="#Home">
       <div className={styles.containerBienvenida}>
         <div className={styles.boxBienvenida}>
-          {/* <div className={styles.circle}></div> */}
           <div className={styles.burbuja1}>
             <img src="./assets/img/burbujaPequena.png" alt="burbuja" />
           </div>
@@ -32,7 +31,6 @@ function Hearo() {
             <p className={styles.p1}>Calidad y Creatividad al</p>
             <p className={styles.p2}>Servicio de tus Metas</p>
           </div>
-          {/* <div className={styles.circle2}></div> */}
           <div className={styles.burbuja2}>
             <img src="./assets/img/burbujaGrande.png" alt="burbuja" />
           </div>
