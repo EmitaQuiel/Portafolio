@@ -172,4 +172,74 @@
   list-style: none;
   text-align: right;
 }
+@media (max-width: 768px) {
+  .modalContent {
+    width: 440px;
+    height: 556px;
+  }
 
+  .image {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 205px;
+  }
+
+  .info h1 {
+    font-size: 15px;
+  }
+
+  .info {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  .descripcion p {
+    font-size: 10px;
+  }
+
+  .link {
+    width: 135px;
+    height: 100px;
+
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .link h3 {
+    font-size: 13px;
+  }
+  .link a {
+    font-size: 9px;
+  }
+  .tecnologias {
+    width: 105px;
+    height: 190px;
+  }
+  .tecnologias h3 {
+    font-size: 13px;
+  }
+  .tecnologias li {
+    text-align: center;
+    font-size: 9px;
+
+    font-family: "Revalia", serif;
+    margin-bottom: 5%;
+    list-style: none;
+  }
+  .contentDetalle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start;
+    padding: 16px;
+  }
+
+  .gallery {
+    grid-column: span 1;
+  }
+
+  .info,
+  .info2 {
+    grid-column: span 1;
+  }
+}

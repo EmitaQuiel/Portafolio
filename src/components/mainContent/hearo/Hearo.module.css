@@ -17,7 +17,7 @@ body {
   display: flex;
   gap: 10px;
   opacity: 0;
-  transform: translateY(150px); 
+  transform: translateY(150px);
   animation: fadeUp 1s ease-out forwards;
   position: relative;
   z-index: 1;
@@ -26,19 +26,20 @@ body {
 .boxBienvenida {
   margin: 40px 40px 0 40px;
   border-radius: 30px;
-  background-color:hsla(217,46%,72%,1);
-  background-image:
-  radial-gradient(at 88% 77%, hsla(217,46%,72%,1) 0px, transparent 50%),
-  radial-gradient(at 98% 3%, hsla(329,76%,84%,1) 0px, transparent 50%),
-  radial-gradient(at 71% 100%, hsla(331,73%,74%,1) 0px, transparent 50%),
-  radial-gradient(at 56% 49%, hsla(217,54%,68%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 46%, hsla(333,100%,84%,1) 0px, transparent 50%);
-  
+  background-color: hsla(217, 46%, 72%, 1);
+  background-image: radial-gradient(
+      at 88% 77%,
+      hsla(217, 46%, 72%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 98% 3%, hsla(329, 76%, 84%, 1) 0px, transparent 50%),
+    radial-gradient(at 71% 100%, hsla(331, 73%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 56% 49%, hsla(217, 54%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 46%, hsla(333, 100%, 84%, 1) 0px, transparent 50%);
+
   padding: 10%;
   width: 70%;
   height: 450px;
-  
-
 }
 .bienvenidaInfo {
   position: relative;
@@ -48,23 +49,21 @@ body {
   margin: 0;
   font-size: 60px;
   font-family: "TECHNOID";
-  
+
   color: white;
   opacity: 0;
   animation: fadeUp 1s ease-out forwards;
 }
-.burbuja1{
+.burbuja1 {
   width: 10%;
-  transform:translateX(-130%) translateY(-40%) rotate(70deg);
+  transform: translateX(-130%) translateY(-40%) rotate(70deg);
   animation: flotarBurbuja1 4s ease-in-out infinite;
-
 }
-.burbuja2 img{
+.burbuja2 img {
   position: relative;
   width: 55%;
-  transform:translateX(131%) translateY(-100%) rotate(-40deg);
+  transform: translateX(131%) translateY(-100%) rotate(-40deg);
   animation: flotarburbuja2 3s ease-in-out infinite;
-  
 }
 .p2 {
   position: relative;
@@ -76,7 +75,7 @@ body {
     transform: translateX(-130%) translateY(-40%) rotate(70deg);
   }
   50% {
-    transform: translateX(-131%) translateY(-42%) rotate(71deg); /* Movimiento sutil */
+    transform: translateX(-131%) translateY(-42%) rotate(71deg); 
   }
   100% {
     transform: translateX(-130%) translateY(-40%) rotate(70deg);
@@ -88,10 +87,10 @@ body {
     transform: translateX(131%) translateY(-100%) rotate(-40deg);
   }
   50% {
-    transform: translateX(131%) translateY(-105%) rotate(-40deg); /* Mueve un poco hacia arriba */
+    transform: translateX(131%) translateY(-105%) rotate(-40deg);
   }
   100% {
-    transform: translateX(131%) translateY(-100%) rotate(-40deg); /* Regresa a la posición inicial */
+    transform: translateX(131%) translateY(-100%) rotate(-40deg); 
   }
 }
 @keyframes fadeUp {
@@ -108,47 +107,82 @@ body {
 .contenedorAbajo {
   margin-left: 5%;
   border-radius: 0 0 30px 30px;
-  background-color:rgb(255, 255, 255);
-  
+  background-color: rgb(255, 255, 255);
+
   padding: 10%;
   width: 70%;
   height: 435px;
-  
-  opacity: 0; 
-  transform: translateY(-50px); 
+
+  opacity: 0;
+  transform: translateY(-50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .contenedorAbajo.visible {
   opacity: 1;
-  transform: translateY(10); 
+  transform: translateY(10);
 }
 
-.contenedorAbajo img{
+.contenedorAbajo img {
   width: 88%;
   border-radius: 0 0 0 30px;
   transform: translateY(-22%) translateX(-16.5%);
 }
-.containerSobremi{
-    transform: translateY(-200%);
+.containerSobremi {
+  transform: translateY(-200%);
 }
-.containerSobremi h2 p{
+.containerSobremi h2 p {
   margin-top: 0;
 }
-.containerSobremi h2{
+.containerSobremi h2 {
   font-size: 45px;
-  font-family: 'TECHNOID';
+  font-family: "TECHNOID";
   transform: translateX(50%);
 }
 
-.containerSobremi p{
+.containerSobremi p {
   font-size: 20px;
   font-family: "Revalia", serif;
   transform: translatex(56%);
-  
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  display: -webkit-box; 
-  -webkit-line-clamp: 8;
 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+}
+
+@media (max-width: 768px) {
+  .burbuja1 img {
+    width: 100px;
+  }
+  .burbuja2 img{
+    width: 50%;
+  }
+  .bienvenidaInfo{
+    transform: translateY(180%);
+  }
+  .bienvenidaInfo p{
+    font-size: 30px;
+    left: 0;
+  }
+  .containerSobremi {
+    transform: translateY(20%) translateX(-50%);
+    margin: 10px;
+  }
+  .containerSobremi h2{
+    font-size: 20px;
+  }
+  .containerSobremi p{
+    font-size: 10px;
+  }
+  .contenedorAbajo img {
+    display: none;
+  }
+  .contenedorAbajo {
+    padding: 5%;
+    width: 70%;
+    height: 400px;
+  
+    transform: translateY(-20px) translateX(6%);
+  }
 }

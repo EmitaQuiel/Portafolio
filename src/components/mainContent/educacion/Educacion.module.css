@@ -9,8 +9,8 @@
   opacity: 1;
   transform: translateX(0);
 }
-.containerEducacion h1{
-  font-family: 'Italiana', serif;
+.containerEducacion h1 {
+  font-family: "Italiana", serif;
   text-align: center;
 }
 
@@ -72,4 +72,41 @@
 .cardCenter > * {
   position: relative;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  
+  .containerEducacion h1 {
+    font-size: 20px;
+  }
+  .containerCenter {
+    transform: translateX(3%);
+  }
+  .cardCenter {
+    width: 201px;
+    height: 156px;
+    margin-bottom: 2%;
+    transform: translateX(40%) translateY(-45%);
+  }
+
+  .containerCenter img {
+    width: 50%;
+    transform: translateX(45%);
+  }
+  .cardCenter h3 {
+    font-size: 20px;
+  }
+
+  .cardCenter p {
+    font-size: 10px;
+    padding: 1%;
+  }
+  .containerInfo1 {
+    text-align: center;
+    transform: translateY(-18%) translateX(8%);
+  }
+
+  .containerInfo2 {
+    text-align: center;
+    transform: translateY(-120%) translateX(50%);
+  }
 }

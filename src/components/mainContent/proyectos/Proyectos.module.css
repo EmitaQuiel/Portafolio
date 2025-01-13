@@ -89,3 +89,35 @@
   justify-content: center;
   margin: 6%;
 }
+@media (max-width: 768px) {
+  .containerProyectos {
+    height: 880px;
+  }
+  .containerProyectos h2 {
+    font-size: 20px;
+  }
+  .containerProyectos {
+    transform: translateY(20%);
+  }
+  .containerTitulos {
+    
+    transform: translateY(0%);
+  }
+  .containerTitulos p {
+    font-size: 10px;
+  }
+  .containerInfo {
+    text-align: center;
+    transform: translateY(0%);
+  }
+  .containerInfo p {
+    font-size: 10px;
+  }
+  .containerCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+}

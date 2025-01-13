@@ -43,3 +43,27 @@
 .imgArrow:hover {
   transform: translateX(5px);
 }
+@media (max-width: 768px) {
+  .containerCard {
+    display: inline-block;
+    margin-left: 2%;
+  }
+  .info1 {
+    width: 150px;
+    height: 156px;
+  }
+  .info1 h2 {
+    font-size: 15px;
+  }
+  .info2 p {
+    font-size: 10px;
+  }
+  .imgArrow {
+    width: 15%;
+    height: 20%;
+    margin-right: 5%;
+  
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+}
