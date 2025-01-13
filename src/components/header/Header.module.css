@@ -8,7 +8,6 @@ header {
   height: 80px;
   padding: 10px;
   position: absolute;
-  z-index: 1;
   opacity: 0;
   animation: fadeUp 1s ease-out forwards;
   z-index: 2;
