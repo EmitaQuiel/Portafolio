@@ -17,9 +17,7 @@ function Hearo() {
       <div className={style.aboutme}>
         <h1>Sobre mi</h1>
         <p>
-          GM, I'm Max. I enjoy building dynamic, creative products from start to
-          finish. Focused on developing intuitive experiences that constantly
-          grow and improve based on user metrics. Always shipping.
+        ¡Hola! Soy Emily. Disfruto creando productos dinámicos y creativos de principio a fin. Me enfoco en desarrollar experiencias intuitivas que evolucionan y mejoran constantemente basadas en las necesidades de los usuarios. Siempre en constante evolución.
         </p>
       </div>
     </div>
