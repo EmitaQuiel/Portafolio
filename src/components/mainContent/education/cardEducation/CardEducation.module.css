@@ -1,0 +1,19 @@
+.Card{
+    color: white;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+.Card h3{
+    font-size: 25px;
+}
+.image{
+    width: 80px;
+    border-radius: 10px;
+    background-color: white;
+}
+.arrow{
+    width: 15px;
+}
