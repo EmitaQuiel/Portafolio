@@ -35,6 +35,15 @@ function Header() {
                 <img src="./assets/img/iconlinkedin.png" alt="LogoLinkedin" />
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@vipertechcr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src="./assets/img/iconTiktok.png" alt="LogoLinkedin" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
