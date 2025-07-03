@@ -41,7 +41,7 @@ function Header() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./assets/img/iconTiktok.png" alt="LogoLinkedin" />
+                <img src="./assets/img/iconTiktok.png" alt="LogoTiktok" />
               </a>
             </li>
           </ul>
