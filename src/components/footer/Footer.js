@@ -10,6 +10,7 @@ function Footer() {
           <CardContact title="Github" text="@EmitaQuiel" link="https://github.com/EmitaQuiel" />
           <CardContact title="Linkedin" text="Emily Castillo" link="https://www.linkedin.com/in/emi-castillo/" />
           <CardContact title="Email" text="fernandacq05@gmail.com" link="mailto:fernandacq05@gmail.com" />
+          <CardContact title="TikTok" text="@vipertechcr" link="https://www.tiktok.com/@vipertechcr" />
         </div>
       </div>
     </footer>
